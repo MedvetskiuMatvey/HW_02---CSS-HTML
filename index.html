@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1 id="title">Добро пожаловать</h1>
+            <nav class="nav-menu">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О себе</a>
+                <a href="hobbies.html">Увлечения</a>
+                <a href="gallery.html">Галерея</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="content-section">
+                <h2>Главный портал</h2>
+                <p>Этот сайт — основная информация про меня. Здесь вы узнаете всё о моих увлечениях, интересах и прочем.</p>
+                
+                <p id="random-quote">Загрузка цитаты...</p>
+                <div id="quote-image"></div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2025 • Реальность под вопросом</p>
+        </footer>
+    </div>
+
+    <script>
+        // Массив цитат с привязкой к изображениям
+        const orkQuotes = [
+            {
+                text: "«Это не были Газкулл. Пока ещё. Не были никем. Но это была часть зелени, которая может стать кем-то — кем угодно — если выживет в следующие несколько часов».",
+                image: "https://i.pinimg.com/originals/5a/c0/2f/5ac02f53eafee05371e56da1c4e28505.png",
+                alt: "Газкулл Маг Урк"
+            },
+            {
+                text: "«ВААААГХ!»",
+                image: "https://yt3.googleusercontent.com/vZ1AYCcYpFlM8y12UdqY7wggKV023YS1oBzwDspSYaeZKEnBnMw0UOSXPklHVpuoL60Cwv-2Og=s900-c-k-c0x00ffffff-no-rj",
+                alt: "ВАААГХ!"
+            },
+            {
+                text: "«Да здравствует Ваагх! Ваагх — это война, а война — это весело!»",
+                image: "https://i.ytimg.com/vi/RB1Jq2LqMCM/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AG-B4AC0AWKAgwIABABGF4gZShIMA8=&amp;rs=AOn4CLBAxlPczBo5EjMu-1R0hFRXM-sArQ",
+                alt: "Горк и Морк"
+            },
+            {
+                text: "«Если это движется — стреляй в это! Если оно взрывается — отлично! Если нет — всё равно стреляй!»",
+                image: "https://i.pinimg.com/originals/a9/9e/bb/a99ebbdf6fe799c9cdb50db21c20f89d.jpg",
+                alt: "Орк с пушкой"
+            },
+            {
+                text: "«Орки — это просто. Чем больше стреляешь — тем больше веселья!»",
+                image: "https://i.pinimg.com/originals/97/d5/8a/97d58a1dbe993c41997672196d6ff055.jpg",
+                alt: "Боевой орк"
+            },
+            {
+                text: "«Мир — это для слабаков. Настоящий орк делает себе мир!»",
+                image: "https://i.pinimg.com/736x/ae/73/1b/ae731b93f464da4ffbb3529220905499.jpg",
+                alt: "Орк-строитель"
+            },
+            {
+                text: "«Ты большой, зелёный и сильный? Значит, ты прав!»",
+                image: "https://i.pinimg.com/736x/6b/e4/88/6be4881a42bdd85787c92a58133e1a10.jpg",
+                alt: "Орк-философ"
+            },
+            {
+                text: "«Когда сомневаешься — бей первым и крепче!»",
+                image: "https://i.pinimg.com/736x/03/18/d7/0318d7378cc8b7750411866eb664c9ac.jpg",
+                alt: "Орк с дабом"
+            }
+        ];
+
+        function getRandomQuote() {
+            return orkQuotes[Math.floor(Math.random() * orkQuotes.length)];
+        }
+
+        function typeWriter(element, text, speed = 80) {
+            let i = 0;
+            element.textContent = '';
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const titleEl = document.getElementById('title');
+            const quoteEl = document.getElementById('random-quote');
+            const imageEl = document.getElementById('quote-image');
+
+            if (titleEl) {
+                const originalText = titleEl.textContent;
+                typeWriter(titleEl, originalText, 80);
+            }
+
+            if (quoteEl && imageEl) {
+                const { text, image, alt } = getRandomQuote();
+                quoteEl.innerHTML = `Случайная цитата орка: <em>${text}</em>`;
+                imageEl.innerHTML = `<img src="${image}" alt="${alt}" style="max-width: 100%; height: auto; margin-top: 10px; border-radius: 4px;">`;
+            }
+        });
+    </script>
+</body>
+</html>

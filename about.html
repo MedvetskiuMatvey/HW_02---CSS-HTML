@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>О себе</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1 id="title">О себе</h1>
+            <nav class="nav-menu">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О себе</a>
+                <a href="hobbies.html">Увлечения</a>
+                <a href="gallery.html">Галерея</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="content-section">
+                <img 
+                    src="file:///C:/Users/5646g/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/tarkov-complaint/%D1%81%D0%B0%D0%B9%D1%82%20%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D0%BA%D0%B0/photo_2025-11-27_21-18-13.jpg" 
+                    alt="Фото автора"
+                    style="display: block; margin: 0 auto 20px; max-width: 250px; height: auto; border: 2px solid var(--matrix-green); border-radius: 8px;"
+                />
+
+                <h2>Коротко о себе</h2>
+                <p><strong>Имя:</strong> Матвей</p>
+                <p><strong>Возраст:</strong> 21</p>
+                <p><strong>Конечности:</strong> все на месте (пока)</p>
+
+                <p>
+                    Я являюсь студентом неплохого высшего заведения.<br>
+                    На это направление меня притащил кто-то из деканата за шкирку, т.к. я хотел забрать документы и уйти в политех.<br>
+                    Существую, пытаюсь выжить.<br>
+                    По выходным обычно работаю или пишу моды для сервера на Java по запросу друзей,<br>
+                    в крайнем случае туплю в потолок.
+                </p>
+
+                <h2>Немного о моих интересах</h2>
+                <p>
+                    Люблю заниматься поиском новых проблем для себя и своего компа,<br>
+                    редко кузнечным ремеслом занимаюсь,<br>
+                    потихоньку читаю ересь Хоруса,<br>
+                    иногда меня увозят в рабство за город.
+                </p>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2025 • Сайт существует. Пока не сломан.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const title = document.getElementById('title');
+            if (!title) return;
+            const text = title.textContent;
+            title.textContent = '';
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    title.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 80);
+                }
+            }
+            typeWriter();
+        });
+    </script>
+</body>
+</html>
