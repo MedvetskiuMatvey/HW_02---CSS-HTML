@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1 id="title">Контакты</h1>
+            <nav class="nav-menu">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О себе</a>
+                <a href="hobbies.html">Увлечения</a>
+                <a href="gallery.html">Галерея</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="content-section">
+                <h2>Каналы связи</h2>
+                <p>Email: <strong>5646ggg@gmail.com</strong></p>
+                <p>Telegram: <strong>@</strong></p>
+                <p>Signal: +1 (234) 5678901</p>
+                <p>Местоположение: <em>57.626656, 39.878964</em></p>
+                <img src="https://sun9-22.userapi.com/s/v1/ig2/HFz2ZKGFJQ0xCtrpH7q4LWKHx6wmhuCsZjtoyDOuNn2YEuSGit9PLq_EaxUmZI9Fs50YLgX-zIVJiE3vbDaCzRw2.jpg?quality=95&as=32x25,48x37,72x56,108x84,160x125,240x187,360x281,480x375,540x421,640x500,720x562,1080x843&from=bu&cs=1080x0" alt="что-то" style="display: block; margin: 20px auto; max-width: 100%; border: 2px solid var(--matrix-green);">
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2025 • Не все каналы безопасны</p>
+        </footer>
+    </div>
+
+    <script>
+        const title = document.getElementById('title');
+        const text = title.textContent;
+        title.textContent = '';
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                title.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 80);
+            }
+        }
+        window.addEventListener('load', typeWriter);
+    </script>
+</body>
+</html>

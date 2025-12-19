@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Галерея</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1 id="title">Галерея</h1>
+            <nav class="nav-menu">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О себе</a>
+                <a href="hobbies.html">Увлечения</a>
+                <a href="gallery.html">Галерея</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="content-section">
+                <h2>что-то из моей галереи</h2>
+                <div class="gallery-grid">
+                    <!-- 7 изображений -->
+                    <div class="gallery-item">
+                        <img src="https://sun9-16.userapi.com/s/v1/ig2/9ePjFcgRjiystEKFhWvcCGuiYdRCFDVZ9efa_5sJEjZt39gV6-84_CKIR2QuJL9gMGCsYopozHKIuQOoN9HYqkGp.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="кошка">
+                        <p>Кошка-начало</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://sun9-66.userapi.com/s/v1/ig2/MjwKxK26vsv1mNtAqPrv-NxueH17cz5Gk0hqVOR1dPRqEdU5iFE8n4y9ZCA9U5jXY4ulN6ms3J2ZSY9UUZT8VXvR.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="кошка">
+                        <p>кошка за секунду до...</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://sun9-30.userapi.com/s/v1/ig2/njGGd7JS4bm7pMpkLzcIm9BDGdHCOu6yelNerz5lSZwDDjb2dQueGJnYN9NANcfXmOX2GUGw8JesqRDWKMr9M18X.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="кошка">
+                        <p>захват ящика</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://sun9-83.userapi.com/s/v1/ig2/514w2BB-q5Rzj0dzh984bz-Eb2rkBjki0gf0b0JHDt6FBcFCAM2aH0d399xn13aMtes3c6D3R1TfxeopWFSF9PPC.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=2560x0" alt="кошка">
+                        <p>захват пк</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://sun9-80.userapi.com/s/v1/ig2/JQAh91gYsfDuwNBfXDvrsRPKCN7HC_Ucn7d_1mkPMBS94fA9OOUyC8D_dlr1Gcvlv35eHmy9b9_XZg8XzupLiWDg.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="крнус">
+                        <p>конус</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://sun9-21.userapi.com/s/v1/ig2/Dx8gPa_G3yf2a_vgNN0RaGyHMyT0HFMGbTzIIlIKBKUvKPTcqp1UfAfSicKUF_H7DFhShfo1GNUPdnQdBB9fVpFm.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="кошка">
+                        <p>а че в пакете</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://sun9-40.userapi.com/s/v1/ig2/r9XB1LpBXoqOz7d2XtJeLVc-lkpxQ9AW3NmG81Sjh5mFHlD7syQ1Qtzpu2pH7AtPKgCquum2IpmDIGRPlbEDSdaj.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,960x1280&from=bu&cs=960x0" alt="кошка">
+                        <p>первая профессия</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2025 • Все изображения в развлекательных целях.</p>
+        </footer>
+    </div>
+
+    <script>
+        const title = document.getElementById('title');
+        const text = title.textContent;
+        title.textContent = '';
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                title.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 80);
+            }
+        }
+        window.addEventListener('load', typeWriter);
+    </script>
+</body>
+</html>

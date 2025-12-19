@@ -1,0 +1,117 @@
+/* === ПЕРЕМЕННЫЕ И БАЗОВЫЕ НАСТРОЙКИ === */
+:root {
+  --matrix-green: #00ff41;
+  --matrix-dark-green: #008f11;
+  --matrix-bg: #0a0a0a;
+  --matrix-bg-light: #1a1a1a;
+  --text-secondary: #ffffff;
+  --border-color: #00ff4133;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  background-color: var(--matrix-bg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  min-height: 100vh;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 65, 0.03),
+    rgba(0, 255, 65, 0.03) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 5px var(--matrix-green), 0 0 10px var(--matrix-green), 0 0 15px var(--matrix-dark-green);
+  }
+  50% {
+    text-shadow: 0 0 10px var(--matrix-green), 0 0 20px var(--matrix-green), 0 0 30px var(--matrix-dark-green);
+  }
+}
+
+/* === ШАПКА === */
+.movie-header {
+  text-align: center;
+  padding: 40px 0;
+  background: linear-gradient(135deg, var(--matrix-bg) 0%, var(--matrix-bg-light) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.movie-header h1 {
+  font-size: 2.5em;
+  color: var(--matrix-green);
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  animation: glow 2s ease-in-out infinite;
+}
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.main-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid var(--matrix-green);
+  border-radius: 5px;
+  background: rgba(0, 255, 65, 0.05);
+  transition: all 0.3s ease;
+}
+.main-nav a:hover {
+  background: var(--matrix-green);
+  color: var(--matrix-bg);
+  transform: scale(1.05);
+}
+
+/* === СЕКЦИИ === */
+.content-section {
+  background: var(--matrix-bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+.content-section h2 {
+  color: var(--matrix-green);
+  margin-bottom: 15px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+.info-item {
+  padding: 12px;
+  background: var(--matrix-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.site-footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #888;
+}
